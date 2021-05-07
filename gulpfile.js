@@ -19,3 +19,5 @@ gulp.task('watch', function(){
     allowLive: true // allow working on the live theme 
   })
 })
+
+// TODO: Add fallback in case variables file doesn't exist. 
