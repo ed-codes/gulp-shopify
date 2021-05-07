@@ -11,6 +11,8 @@
   "devDependencies": {
     "@shopify/themekit": "^1.1.7",
     "gulp": "^4.0.2",
+    "gulp-append-prepend": "^1.0.9",
+    "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.1.0"
   }
 }
