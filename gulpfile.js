@@ -4,7 +4,6 @@ const concat = require('gulp-concat');
 const gap = require('gulp-append-prepend');
 const themeKit = require('@shopify/themekit');
 
-
 gulp.task('styles', function(){
   return gulp.src('src/main.scss') // main input file
   .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError)) // process our sass files
@@ -15,6 +14,8 @@ gulp.task('styles', function(){
 
 gulp.task('watch', function(){
   gulp.watch('src/**/*.scss', gulp.series('styles'))
+  themeKit.command('watch', {
+    env: 'development', //environment is the first line in your config.yml
+    allowLive: true // allow working on the live theme 
+  })
 })
-
-// Todo: Add themekit upload to watch task
